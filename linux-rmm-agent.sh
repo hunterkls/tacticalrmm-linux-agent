@@ -25,11 +25,11 @@ DEBUG=0
 INSECURE=0
 NOMESH=0
 
-echo -ne "${YELLOW}Enter the the link of your rmm server EX: rmm.example.com${NC}: "
+echo -ne "${YELLOW}Enter the the link of your rmm server EX: https://rmm.example.com${NC}: "
   read agentDL
-echo -ne "${YELLOW}Enter the link of your mesh server EX: mesh.example.com${NC}: "
+echo -ne "${YELLOW}Enter the link of your mesh server EX: https://mesh.example.com${NC}: "
   read meshDL
-echo -ne "${YELLOW}Enter the link of your api server EX: api.example.com${NC}: "
+echo -ne "${YELLOW}Enter the link of your api server EX: https://api.example.com${NC}: "
   read apiURL
 echo -ne "${YELLOW}Enter the auth token${NC}: "
   read token
@@ -41,6 +41,10 @@ echo -ne "${YELLOW}Enter the agent Type EX: (server , workstation ) ${NC}: "
   read agentType
 echo -ne "${YELLOW}Enter your proxy url otherwise just press enter${NC}: "
   read proxy
+echo -ne "${YELLOW}If this is being ran in DEBUG mode, press 1 otherwise press enter${NC}: "
+  read DEBUG
+echo -ne "${YELLOW}If this needs to be ran in Insecure mode, press 1 othewise press enter${NC}: "
+  read INSECURE
 
 
 agentBinPath='/usr/local/bin'
